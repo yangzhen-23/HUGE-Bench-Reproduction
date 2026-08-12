@@ -1,0 +1,117 @@
+{
+  "status": "SUCCESS",
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-m",
+    "huge_lightweight.cli",
+    "--annotations-root",
+    "HUGE-Bench\\trajectory_generation\\stage_annotations",
+    "--repo-root",
+    "HUGE-Bench",
+    "--output",
+    "lightweight_reproduction\\outputs"
+  ],
+  "started_utc": "2026-08-12T19:39:55.903962+00:00",
+  "ended_utc": "2026-08-12T19:40:02.971576+00:00",
+  "elapsed_seconds": 7.066996900000959,
+  "runtime": {
+    "python": "3.12.7",
+    "numpy": "1.26.4",
+    "matplotlib": "3.9.2",
+    "pillow": "10.4.0"
+  },
+  "platform": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "release": "11",
+    "machine": "",
+    "processor": ""
+  },
+  "inputs": {
+    "annotations_root": "D:\\university\\推免\\夏令营\\中南大学\\陶超 考核复现\\HUGE-Bench\\trajectory_generation\\stage_annotations",
+    "repo_root": "D:\\university\\推免\\夏令营\\中南大学\\陶超 考核复现\\HUGE-Bench",
+    "annotation_manifest_sha256": "eef03c4acb5ade46c64e12c799d480b8bdf918f30ec0d93058692f27ea4c95e7",
+    "repository_commit": "d000b99794e9da85dff117db61ef874659b91ae8"
+  },
+  "resources": {
+    "peak_python_memory_bytes": 99371512,
+    "elapsed_seconds": 7.066996900000959,
+    "measured": true
+  },
+  "metric_smoke": {
+    "status": "PASS",
+    "label": "Synthetic metric implementation smoke test — not a paper result.",
+    "avg_tcr": 1.0,
+    "ndtw": 1.0,
+    "nsp": 1.0,
+    "success": 1.0,
+    "path_length": 2.0,
+    "limitations": "synthetic identical trajectories only; no predicted model trajectory, collision mesh, 3DGS simulator, or closed-loop evaluation; the result cannot reproduce or support the paper's model-performance table; softdtw_gamma=0.1 is used because the current official implementation with gamma 0 exhibits division-by-zero / non-finite behavior in the local probe."
+  },
+  "outputs": {
+    "HUGE_Bench_轻量复现报告.html": {
+      "sha256": "ba53bfab8e330b274ade11b892efac82774d5f4c7cc364078809d0d3ffdbb72b",
+      "size_bytes": 6521
+    },
+    "HUGE_Bench_轻量复现报告.md": {
+      "sha256": "784e72aba1a716c99b5f2bdf753d7538c0706d30a53fd569d6073dae95568d04",
+      "size_bytes": 4908
+    },
+    "figures/01_split_overview.png": {
+      "sha256": "b9377bb2e3642664abbcc991c5c18ad42fad4570c31ffa55209e3b7cc775864b",
+      "size_bytes": 77958
+    },
+    "figures/02_task_distribution.png": {
+      "sha256": "e820bd55b420b38f9ca8950c66f85c776e33c5d462c381904cea38594cc0bf74",
+      "size_bytes": 52650
+    },
+    "figures/03_task_scene_heatmap.png": {
+      "sha256": "59ce31a2075dd425bd946e2abed4a12c760046dba9c2b0ef1239df6ec08c239c",
+      "size_bytes": 96186
+    },
+    "figures/04_episode_length_distribution.png": {
+      "sha256": "2c171b5007dbbca3c8afcaa8238a49364bd398ffb2904d833bc6b3a4869ab89d",
+      "size_bytes": 66779
+    },
+    "figures/05_stages_per_episode.png": {
+      "sha256": "28c4fd3104e43e3aff99c7d2d83d1c8295a511913c7f15788d4859b758dea1c3",
+      "size_bytes": 51544
+    },
+    "figures/06_stage_duration_by_task.png": {
+      "sha256": "eae17ba57b47f750923d900186e6fba116fc8b21b258d87c33ce015451ba6f66",
+      "size_bytes": 75633
+    },
+    "figures/07_annotation_provenance.png": {
+      "sha256": "ffda3ef65e6d023891e183ca26c6d9e8cdc47cc495a36b7be88e7cf3d8523156",
+      "size_bytes": 70010
+    },
+    "figures/08_example_stage_timeline.png": {
+      "sha256": "ad08f7e608d7c38ce7fa794fae9b6232994193f175059a1f32a39dee771f137e",
+      "size_bytes": 84187
+    },
+    "summary.json": {
+      "sha256": "8b1a662e57d228bd39dccca2528538f0535502a5ce2e20ddc8c504646207428d",
+      "size_bytes": 8426
+    },
+    "tables/dataset_overview.csv": {
+      "sha256": "0ddf283c5ef54aa9d695fa86570b44ca735883e18ff110648bccc5b55b39a7dd",
+      "size_bytes": 451
+    },
+    "tables/stage_statistics.csv": {
+      "sha256": "428366b6576cc66003b3e70bdf09b25335a56f02b9d5af9888e1a1a081a7a214",
+      "size_bytes": 2306
+    },
+    "tables/task_scene_matrix.csv": {
+      "sha256": "d021866e7e0dcb403046121973618aacca699af5a33bf3b798867cb575e06415",
+      "size_bytes": 285
+    },
+    "tables/task_statistics.csv": {
+      "sha256": "90bbf6cb062f9216501019351b2ffd2484bb2a1d1dca200c0f8fc0aa027fab13",
+      "size_bytes": 2356
+    },
+    "tables/validation_report.csv": {
+      "sha256": "63b5adb639e13eeebc9b9178e7583800ca0acf889e8f7186e1ef94aebc6466f6",
+      "size_bytes": 19897923
+    }
+  }
+}

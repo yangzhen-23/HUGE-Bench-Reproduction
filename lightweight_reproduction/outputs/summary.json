@@ -1,0 +1,304 @@
+{
+  "scope": {
+    "allowed_conclusion": "复现了 HUGE-Bench 官方公开数据的任务结构、多阶段标注统计与标注完整性检查。",
+    "excluded_claims": [
+      "未复现 PI0/PI0.5 模型性能。",
+      "未复现论文 TCR、nDTW、NSP、CR 或 CSPL 主实验数值。",
+      "未完成 3DGS 渲染、闭环飞行或碰撞评估。",
+      "recovered_from_released_actions 不等同于原始人工阶段标注。"
+    ]
+  },
+  "source": {
+    "source_dataset": "yu781986168/HUGE_Dataset_v0",
+    "annotations_root": "D:\\university\\推免\\夏令营\\中南大学\\陶超 考核复现\\HUGE-Bench\\trajectory_generation\\stage_annotations",
+    "repository_commit": "d000b99794e9da85dff117db61ef874659b91ae8",
+    "manifest_sha256": "eef03c4acb5ade46c64e12c799d480b8bdf918f30ec0d93058692f27ea4c95e7"
+  },
+  "counts": {
+    "total_episodes": 6168,
+    "total_stage_segments": 27539,
+    "total_frames": 2059490,
+    "total_hours_at_5fps": 114.4161111111111,
+    "task_count": 8,
+    "scene_count": 7,
+    "raw_subtask_files": 20,
+    "observed_stages_per_episode": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "splits": [
+    {
+      "split": "train",
+      "episodes": 5175,
+      "episode_ratio": 0.8390077821011673,
+      "frames": 1720096,
+      "stages": 23115,
+      "hours_at_5fps": 95.5608888888889
+    },
+    {
+      "split": "test_seen",
+      "episodes": 576,
+      "episode_ratio": 0.0933852140077821,
+      "frames": 195336,
+      "stages": 2573,
+      "hours_at_5fps": 10.851999999999999
+    },
+    {
+      "split": "test_unseen",
+      "episodes": 417,
+      "episode_ratio": 0.06760700389105058,
+      "frames": 144058,
+      "stages": 1851,
+      "hours_at_5fps": 8.003222222222222
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "0",
+      "display_name": "基础导航",
+      "episodes": 2074,
+      "episode_ratio": 0.33625162127107655,
+      "frames": 205265,
+      "stages": 6222,
+      "scenes": 4,
+      "median_episode_frames": 99.0,
+      "mean_stages_per_episode": 3.0
+    },
+    {
+      "task_id": "hl",
+      "display_name": "高低位导航",
+      "episodes": 825,
+      "episode_ratio": 0.13375486381322957,
+      "frames": 227344,
+      "stages": 4950,
+      "scenes": 4,
+      "median_episode_frames": 275.0,
+      "mean_stages_per_episode": 6.0
+    },
+    {
+      "task_id": "orbit",
+      "display_name": "单目标环绕",
+      "episodes": 826,
+      "episode_ratio": 0.13391699092088197,
+      "frames": 243186,
+      "stages": 4956,
+      "scenes": 4,
+      "median_episode_frames": 294.0,
+      "mean_stages_per_episode": 6.0
+    },
+    {
+      "task_id": "building",
+      "display_name": "建筑导航",
+      "episodes": 627,
+      "episode_ratio": 0.10165369649805447,
+      "frames": 370524,
+      "stages": 3762,
+      "scenes": 2,
+      "median_episode_frames": 471.0,
+      "mean_stages_per_episode": 6.0
+    },
+    {
+      "task_id": "road",
+      "display_name": "道路跟随",
+      "episodes": 724,
+      "episode_ratio": 0.11738002594033722,
+      "frames": 366915,
+      "stages": 3620,
+      "scenes": 1,
+      "median_episode_frames": 376.0,
+      "mean_stages_per_episode": 5.0
+    },
+    {
+      "task_id": "farm",
+      "display_name": "农田导航",
+      "episodes": 133,
+      "episode_ratio": 0.02156290531776913,
+      "frames": 204690,
+      "stages": 532,
+      "scenes": 1,
+      "median_episode_frames": 1387.0,
+      "mean_stages_per_episode": 4.0
+    },
+    {
+      "task_id": "obstacle",
+      "display_name": "避障",
+      "episodes": 524,
+      "episode_ratio": 0.08495460440985733,
+      "frames": 210749,
+      "stages": 887,
+      "scenes": 4,
+      "median_episode_frames": 273.5,
+      "mean_stages_per_episode": 1.6927480916030535
+    },
+    {
+      "task_id": "orbit_multi",
+      "display_name": "多目标环绕",
+      "episodes": 435,
+      "episode_ratio": 0.07052529182879377,
+      "frames": 230817,
+      "stages": 2610,
+      "scenes": 4,
+      "median_episode_frames": 531.0,
+      "mean_stages_per_episode": 6.0
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "1_office",
+      "episodes": 1512
+    },
+    {
+      "scene": "2_city",
+      "episodes": 1408
+    },
+    {
+      "scene": "3_road",
+      "episodes": 2303
+    },
+    {
+      "scene": "4_lake",
+      "episodes": 630
+    },
+    {
+      "scene": "no1_building",
+      "episodes": 105
+    },
+    {
+      "scene": "no3_door",
+      "episodes": 104
+    },
+    {
+      "scene": "overhead_bridge",
+      "episodes": 106
+    }
+  ],
+  "episode_length_quantiles_frames": {
+    "p25": 113.0,
+    "p50": 268.0,
+    "p75": 401.0,
+    "p99": 1484.33
+  },
+  "stage_duration_quantiles_frames": {
+    "p25": 17.0,
+    "p50": 29.0,
+    "p75": 55.0,
+    "p99": 874.239999999998
+  },
+  "provenance": {
+    "original_raw": {
+      "episodes": 5644,
+      "episode_ratio": 0.9150453955901426,
+      "stages": 26652,
+      "stage_ratio": 0.96779113257562
+    },
+    "recovered_from_released_actions": {
+      "episodes": 524,
+      "episode_ratio": 0.08495460440985733,
+      "stages": 887,
+      "stage_ratio": 0.03220886742437997
+    },
+    "caveat": "recovered obstacle-action boundaries are not original human annotations; recovered_from_released_actions 不等同于原始人工阶段标注。"
+  },
+  "representative_episodes": [
+    {
+      "task_id": "0",
+      "display_name": "基础导航",
+      "split": "train",
+      "episode_index": 11,
+      "length": 99,
+      "provenance": "original_raw",
+      "instruction": "Fly to 60 meters above the multi-lane arterial road."
+    },
+    {
+      "task_id": "hl",
+      "display_name": "高低位导航",
+      "split": "train",
+      "episode_index": 1737,
+      "length": 275,
+      "provenance": "original_raw",
+      "instruction": "Orbit the glass greenhouse structure once at 70 meters"
+    },
+    {
+      "task_id": "orbit",
+      "display_name": "单目标环绕",
+      "split": "train",
+      "episode_index": 3529,
+      "length": 294,
+      "provenance": "original_raw",
+      "instruction": "Orbit the construction site entrance gate once at 30 meters with a 20-meter radius."
+    },
+    {
+      "task_id": "building",
+      "display_name": "建筑导航",
+      "split": "train",
+      "episode_index": 2651,
+      "length": 471,
+      "provenance": "original_raw",
+      "instruction": "Orbit the building in the upper right of the view once."
+    },
+    {
+      "task_id": "road",
+      "display_name": "道路跟随",
+      "split": "train",
+      "episode_index": 4566,
+      "length": 376,
+      "provenance": "original_raw",
+      "instruction": "Inspect the road in the view, heading towards the upper left."
+    },
+    {
+      "task_id": "farm",
+      "display_name": "农田导航",
+      "split": "train",
+      "episode_index": 3043,
+      "length": 1387,
+      "provenance": "original_raw",
+      "instruction": "Perform a mapping mission over the field in the lower left of the view."
+    },
+    {
+      "task_id": "obstacle",
+      "display_name": "避障",
+      "split": "train",
+      "episode_index": 3072,
+      "length": 273,
+      "provenance": "recovered_from_released_actions",
+      "instruction": "Fly through the current building complex while avoiding obstacles."
+    },
+    {
+      "task_id": "orbit_multi",
+      "display_name": "多目标环绕",
+      "split": "train",
+      "episode_index": 4845,
+      "length": 531,
+      "provenance": "original_raw",
+      "instruction": "Spiral down around the geotextile covered construction site"
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "total_checks": 147263,
+    "pass_count": 147263,
+    "fail_count": 0,
+    "failure_ids": [],
+    "failure_scopes": []
+  },
+  "metric_smoke": {
+    "status": "PASS",
+    "label": "Synthetic metric implementation smoke test — not a paper result.",
+    "avg_tcr": 1.0,
+    "ndtw": 1.0,
+    "nsp": 1.0,
+    "success": 1.0,
+    "path_length": 2.0,
+    "limitations": "synthetic identical trajectories only; no predicted model trajectory, collision mesh, 3DGS simulator, or closed-loop evaluation; the result cannot reproduce or support the paper's model-performance table; softdtw_gamma=0.1 is used because the current official implementation with gamma 0 exhibits division-by-zero / non-finite behavior in the local probe."
+  },
+  "resources": {
+    "peak_python_memory_bytes": 99371512,
+    "elapsed_seconds": 6.936030999997456,
+    "measured": true
+  }
+}

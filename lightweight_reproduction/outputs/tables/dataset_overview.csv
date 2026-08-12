@@ -1,0 +1,5 @@
+split,episodes,episode_percent,total_frames,total_hours_at_5fps,stage_segments,mean_episode_frames,median_episode_frames,mean_stages_per_episode,unique_tasks,unique_scenes
+train,5175,83.900778,1720096,95.560889,23115,332.3857,267,4.466667,8,7
+test_seen,576,9.338521,195336,10.852,2573,339.125,273,4.467014,8,7
+test_unseen,417,6.7607,144058,8.003222,1851,345.46283,272,4.438849,8,7
+overall,6168,100,2059490,114.416111,27539,333.899157,268,4.464818,8,7

@@ -1,0 +1,9 @@
+task_id,1_office,2_city,3_road,4_lake,no1_building,no3_door,overhead_bridge
+0,633,402,738,301,0,0,0
+hl,241,178,274,132,0,0,0
+orbit,232,185,277,132,0,0,0
+building,282,345,0,0,0,0,0
+road,0,0,724,0,0,0,0
+farm,0,0,133,0,0,0,0
+obstacle,0,209,0,0,105,104,106
+orbit_multi,124,89,157,65,0,0,0
