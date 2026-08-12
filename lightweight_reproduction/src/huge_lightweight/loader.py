@@ -1,3 +1,27 @@
+"""把硬盘上的标注读进 Python"""
+"""
+`load_annotations()` 的核心逻辑非常直白：
+manifest = load_manifest(root)
+
+for split in:
+    train
+    test_seen
+    test_unseen
+
+    读取 episode_mapping
+    读取 stage_segments
+
+然后：
+JSON
+ ↓
+dict
+ ↓
+EpisodeRecord / StageRecord
+ ↓
+AnnotationDataset
+
+"""
+
 from __future__ import annotations
 
 import json

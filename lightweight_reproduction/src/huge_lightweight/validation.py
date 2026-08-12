@@ -1,4 +1,4 @@
-"""Deterministic integrity validation for loaded HUGE-Bench annotations."""
+"""证明你读取的数据确实与官方发布的数据一致，而且内部逻辑没有问题。"""
 
 from __future__ import annotations
 

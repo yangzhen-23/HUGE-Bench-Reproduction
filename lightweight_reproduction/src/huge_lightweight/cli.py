@@ -1,5 +1,9 @@
 """One-command orchestration for the offline HUGE-Bench reproduction."""
+"""
 
+你运行的真正入口
+
+"""
 from __future__ import annotations
 
 import argparse

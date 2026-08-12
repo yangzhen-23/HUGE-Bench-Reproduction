@@ -1,5 +1,7 @@
 """Deterministic Chinese reports for the annotation-only reproduction."""
-
+"""
+把结果整理成“人能看的报告”
+"""
 from __future__ import annotations
 
 import dataclasses

@@ -1,5 +1,15 @@
 """Deterministic summary tables derived from loaded HUGE-Bench annotations."""
+"""
+开始真正做特征统计分析
+8个任务ID:("0", "hl", "orbit", "building",
+ "road", "farm", "obstacle", "orbit_multi")
+计算：
+数据集整体统计 dataset_overview.csv
+每个任务的统计 task_statistics.csv
+Task × Scene 统计 task_scene_matrix.csv
+Stage 统计 stage_statistics.csv
 
+"""
 from __future__ import annotations
 
 import csv

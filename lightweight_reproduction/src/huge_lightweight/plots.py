@@ -1,5 +1,26 @@
 """Deterministic publication-style figures derived from :class:`AnalysisResult`."""
+"""
+绘图：
+01_split_overview.png
+02_task_distribution.png
+03_task_scene_heatmap.png
+04_episode_length_distribution.png
+05_stages_per_episode.png
+06_stage_duration_by_task.png
+07_annotation_provenance.png
+08_example_stage_timeline.png
 
+| 图   | 含义                           |
+| ---- | ------------------------------ |
+| 01   | Train / Seen / Unseen 数据规模 |
+| 02   | 8 类任务的数据量               |
+| 03   | 8 类任务 × 场景覆盖情况        |
+| 04   | 每条轨迹有多长                 |
+| 05   | 每条轨迹包含几个 Stage         |
+| 06   | 每种任务 Stage 持续多久        |
+| 07   | Stage 标注来源                 |
+| 08   | 真实 Episode 的多阶段时间轴    |
+"""
 from __future__ import annotations
 
 from dataclasses import dataclass

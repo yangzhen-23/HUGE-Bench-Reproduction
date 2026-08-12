@@ -1,3 +1,4 @@
+"""规定后面的程序统一使用什么数据格式。"""
 from __future__ import annotations
 
 from dataclasses import dataclass
