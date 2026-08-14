@@ -1,5 +1,4 @@
-"""One-command orchestration for the offline HUGE-Bench reproduction."""
-"""
+"""One-command orchestration for the offline HUGE-Bench reproduction.
 
 你运行的真正入口
 

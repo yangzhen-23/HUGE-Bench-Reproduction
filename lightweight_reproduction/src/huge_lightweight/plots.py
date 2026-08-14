@@ -1,5 +1,4 @@
-"""Deterministic publication-style figures derived from :class:`AnalysisResult`."""
-"""
+"""Deterministic publication-style figures derived from :class:`AnalysisResult`.
 绘图：
 01_split_overview.png
 02_task_distribution.png
@@ -78,7 +77,6 @@ PROVENANCE_LABELS = {
     "recovered_from_released_actions": "Recovered from\nreleased actions",
 }
 PROVENANCE_COLORS = {"original_raw": "#7A7A7A", "recovered_from_released_actions": "#2A9D8F"}
-FOOTER = "Source: official HUGE-Bench stage-annotation sidecar"
 FILENAMES = (
     "01_split_overview.png",
     "02_task_distribution.png",
@@ -210,13 +208,6 @@ def _new_figure(*, width: float = 7.2, height: float = 4.2, **kwargs: object) ->
     return plt.figure(figsize=(width, height), constrained_layout=True, **kwargs)
 
 
-def _footer(figure: plt.Figure) -> None:
-    layout_engine = figure.get_layout_engine()
-    if layout_engine is not None:
-        layout_engine.set(rect=(0.0, 0.12, 1.0, 0.85))
-    figure.text(0.5, 0.012, FOOTER, ha="center", va="bottom", color="#777777", fontsize=7)
-
-
 def _save_figure(figure: plt.Figure, path: Path) -> None:
     try:
         figure.savefig(path, dpi=180, bbox_inches="tight", facecolor="white")
@@ -239,7 +230,6 @@ def _split_overview(result: AnalysisResult) -> plt.Figure:
         axis.grid(axis="y", color="#E5E5E5", linewidth=0.6)
         axis.set_axisbelow(True)
     figure.suptitle("Dataset coverage across official splits", fontsize=11, fontweight="bold")
-    _footer(figure)
     return figure
 
 
@@ -261,7 +251,6 @@ def _task_distribution(result: AnalysisResult) -> plt.Figure:
     axis.bar_label(bars, labels=[f"{value:,}" for value in values], padding=3, fontsize=7)
     axis.grid(axis="x", color="#E5E5E5", linewidth=0.6)
     axis.set_axisbelow(True)
-    _footer(figure)
     return figure
 
 
@@ -282,7 +271,6 @@ def _task_scene_heatmap(result: AnalysisResult) -> plt.Figure:
             axis.text(column_index, row_index, str(value), ha="center", va="center", color="white" if value > threshold else "#222222", fontsize=7)
     colorbar = figure.colorbar(image, ax=axis, shrink=0.86)
     colorbar.set_label("Episodes")
-    _footer(figure)
     return figure
 
 
@@ -314,7 +302,6 @@ def _episode_length_distribution(result: AnalysisResult) -> plt.Figure:
     axis.legend(loc="upper right")
     axis.grid(axis="y", color="#E5E5E5", linewidth=0.6)
     axis.set_axisbelow(True)
-    _footer(figure)
     return figure
 
 
@@ -337,7 +324,6 @@ def _stages_per_episode(result: AnalysisResult) -> plt.Figure:
     axis.legend(title="Stages per episode", ncols=min(4, max(1, len(categories))), loc="lower center", bbox_to_anchor=(0.5, 1.0))
     axis.grid(axis="x", color="#E5E5E5", linewidth=0.6)
     axis.set_axisbelow(True)
-    _footer(figure)
     return figure
 
 
@@ -362,7 +348,6 @@ def _stage_duration_by_task(result: AnalysisResult) -> plt.Figure:
     axis.text(0.99, 0.98, f"Display capped at overall p99 = {p99:.1f} frames; values above p99 are outside the displayed range.", transform=axis.transAxes, ha="right", va="top", fontsize=6.5, color="#555555")
     axis.grid(axis="y", color="#E5E5E5", linewidth=0.6)
     axis.set_axisbelow(True)
-    _footer(figure)
     return figure
 
 
@@ -381,8 +366,6 @@ def _annotation_provenance(result: AnalysisResult) -> plt.Figure:
         axis.grid(axis="y", color="#E5E5E5", linewidth=0.6)
         axis.set_axisbelow(True)
     figure.suptitle("Annotation provenance coverage", fontsize=11, fontweight="bold")
-    figure.text(0.5, 0.075, "Recovered boundaries apply to released obstacle actions; they are not original human annotations.", ha="center", color="#555555", fontsize=7)
-    _footer(figure)
     return figure
 
 
@@ -409,5 +392,4 @@ def _example_stage_timeline(result: AnalysisResult) -> plt.Figure:
     axis.legend(handles=handles, title="Subtask ID", ncols=min(6, max(1, len(handles))), loc="lower center", bbox_to_anchor=(0.5, 1.0))
     axis.grid(axis="x", color="#E5E5E5", linewidth=0.6)
     axis.set_axisbelow(True)
-    _footer(figure)
     return figure

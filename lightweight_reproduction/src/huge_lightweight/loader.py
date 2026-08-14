@@ -1,5 +1,4 @@
-"""把硬盘上的标注读进 Python"""
-"""
+"""把硬盘上的标注读进 Python
 `load_annotations()` 的核心逻辑非常直白：
 manifest = load_manifest(root)
 

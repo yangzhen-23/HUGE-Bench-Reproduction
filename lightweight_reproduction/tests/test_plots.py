@@ -9,6 +9,7 @@ import numpy as np
 import pytest
 from PIL import Image, ImageStat
 
+from huge_lightweight import plots as plots_module
 from huge_lightweight.analysis import TASK_ORDER, analyze
 from huge_lightweight.loader import SPLIT_ORDER, load_annotations
 from huge_lightweight.models import AnnotationDataset, EpisodeRecord, StageRecord
@@ -31,6 +32,36 @@ EXPECTED_FILENAMES = (
     "07_annotation_provenance.png",
     "08_example_stage_timeline.png",
 )
+
+
+def test_all_figure_objects_omit_explanatory_footers(synthetic_result):
+    forbidden = {
+        "Source: official HUGE-Bench stage-annotation sidecar",
+        "Recovered boundaries apply to released obstacle actions; they are not original human annotations.",
+    }
+    plotters = (
+        plots_module._split_overview,
+        plots_module._task_distribution,
+        plots_module._task_scene_heatmap,
+        plots_module._episode_length_distribution,
+        plots_module._stages_per_episode,
+        plots_module._stage_duration_by_task,
+        plots_module._annotation_provenance,
+        plots_module._example_stage_timeline,
+    )
+
+    for plotter in plotters:
+        figure = plotter(synthetic_result)
+        try:
+            rendered_text = {text.get_text() for text in figure.texts}
+            rendered_text.update(
+                text.get_text()
+                for axis in figure.axes
+                for text in axis.texts
+            )
+            assert forbidden.isdisjoint(rendered_text), plotter.__name__
+        finally:
+            plt.close(figure)
 
 
 def _episode(

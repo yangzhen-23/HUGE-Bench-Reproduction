@@ -1,5 +1,4 @@
-"""Deterministic summary tables derived from loaded HUGE-Bench annotations."""
-"""
+"""Deterministic summary tables derived from loaded HUGE-Bench annotations.
 开始真正做特征统计分析
 8个任务ID:("0", "hl", "orbit", "building",
  "road", "farm", "obstacle", "orbit_multi")

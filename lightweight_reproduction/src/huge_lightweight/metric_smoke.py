@@ -1,5 +1,4 @@
-"""Non-blocking execution smoke test for the local official metric module."""
-"""
+"""Non-blocking execution smoke test for the local official metric module.
 看看官方 `metric.py` 在你这个 Python 环境里能不能正常 import、调用、返回有限数值。
 
 """

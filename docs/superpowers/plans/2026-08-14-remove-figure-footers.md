@@ -19,6 +19,45 @@
 
 ---
 
+### Task 0: Restore a Clean Python Baseline
+
+**Files:**
+- Modify: `lightweight_reproduction/src/huge_lightweight/analysis.py`
+- Modify: `lightweight_reproduction/src/huge_lightweight/cli.py`
+- Modify: `lightweight_reproduction/src/huge_lightweight/loader.py`
+- Modify: `lightweight_reproduction/src/huge_lightweight/metric_smoke.py`
+- Modify: `lightweight_reproduction/src/huge_lightweight/plots.py`
+- Modify: `lightweight_reproduction/src/huge_lightweight/report.py`
+
+**Interfaces:**
+- Consumes: the existing English module docstring and the user-added Chinese explanatory string in each affected module.
+- Produces: one legal combined module docstring per file, followed immediately by `from __future__ import annotations`; no runtime interface or explanatory content changes.
+
+- [ ] **Step 1: Preserve the observed RED baseline evidence**
+
+The pre-implementation baseline command already failed during collection:
+
+```powershell
+& 'D:\anaconda3\envs\my_env\python.exe' -m pytest lightweight_reproduction/tests -q
+```
+
+Expected/observed failure: `SyntaxError: from __future__ imports must occur at the beginning of the file` because six modules contain two string literals before the future import.
+
+- [ ] **Step 2: Merge each pair of top-level strings**
+
+For each affected file, retain all English and Chinese explanatory text inside a single leading triple-quoted module docstring. Ensure `from __future__ import annotations` is the first statement after that one docstring. Do not edit executable statements.
+
+- [ ] **Step 3: Verify compilation and the clean baseline**
+
+```powershell
+& 'D:\anaconda3\envs\my_env\python.exe' -m compileall -q lightweight_reproduction/src
+& 'D:\anaconda3\envs\my_env\python.exe' -m pytest lightweight_reproduction/tests -q
+```
+
+Expected: compile exit 0 and the pre-footer baseline suite passes 76 tests.
+
+---
+
 ### Task 1: Remove Footer Text at the Figure-Object Boundary
 
 **Files:**
