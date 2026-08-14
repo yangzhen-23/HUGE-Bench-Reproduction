@@ -1,24 +1,24 @@
 {
   "status": "SUCCESS",
   "command": [
-    "D:\\anaconda3\\python.exe",
+    "D:\\anaconda3\\envs\\my_env\\python.exe",
     "-m",
     "huge_lightweight.cli",
     "--annotations-root",
-    "HUGE-Bench\\trajectory_generation\\stage_annotations",
+    "..\\HUGE-Bench\\trajectory_generation\\stage_annotations",
     "--repo-root",
-    "HUGE-Bench",
+    "..\\HUGE-Bench",
     "--output",
     "lightweight_reproduction\\outputs"
   ],
-  "started_utc": "2026-08-12T19:39:55.903962+00:00",
-  "ended_utc": "2026-08-12T19:40:02.971576+00:00",
-  "elapsed_seconds": 7.066996900000959,
+  "started_utc": "2026-08-14T14:01:53.340564+00:00",
+  "ended_utc": "2026-08-14T14:02:01.143104+00:00",
+  "elapsed_seconds": 7.802797700001975,
   "runtime": {
-    "python": "3.12.7",
-    "numpy": "1.26.4",
-    "matplotlib": "3.9.2",
-    "pillow": "10.4.0"
+    "python": "3.12.9",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.9",
+    "pillow": "12.0.0"
   },
   "platform": {
     "platform": "Windows-11-10.0.26200-SP0",
@@ -34,8 +34,8 @@
     "repository_commit": "d000b99794e9da85dff117db61ef874659b91ae8"
   },
   "resources": {
-    "peak_python_memory_bytes": 99371512,
-    "elapsed_seconds": 7.066996900000959,
+    "peak_python_memory_bytes": 99372783,
+    "elapsed_seconds": 7.802797700001975,
     "measured": true
   },
   "metric_smoke": {
@@ -50,47 +50,47 @@
   },
   "outputs": {
     "HUGE_Bench_轻量复现报告.html": {
-      "sha256": "ba53bfab8e330b274ade11b892efac82774d5f4c7cc364078809d0d3ffdbb72b",
+      "sha256": "578967f54c1ba8c629eca4ab06a05acc9ceb8e2b2d402ef60f24da47e54918bc",
       "size_bytes": 6521
     },
     "HUGE_Bench_轻量复现报告.md": {
-      "sha256": "784e72aba1a716c99b5f2bdf753d7538c0706d30a53fd569d6073dae95568d04",
+      "sha256": "72925b5278222c66b3eaf6dfb37597576169f74414f2606b99243831a9d83509",
       "size_bytes": 4908
     },
     "figures/01_split_overview.png": {
-      "sha256": "b9377bb2e3642664abbcc991c5c18ad42fad4570c31ffa55209e3b7cc775864b",
-      "size_bytes": 77958
+      "sha256": "5d16e26fa15fb373f0c0b4ddc79e0477d5afa46e5ec2e0147f7463cbad834b5e",
+      "size_bytes": 70722
     },
     "figures/02_task_distribution.png": {
-      "sha256": "e820bd55b420b38f9ca8950c66f85c776e33c5d462c381904cea38594cc0bf74",
-      "size_bytes": 52650
+      "sha256": "2ad5ddebb2c25aca6cdeb5a69f6eda2cd4ad63487b97b514c47e1274089e9623",
+      "size_bytes": 45817
     },
     "figures/03_task_scene_heatmap.png": {
-      "sha256": "59ce31a2075dd425bd946e2abed4a12c760046dba9c2b0ef1239df6ec08c239c",
-      "size_bytes": 96186
+      "sha256": "911d4adca6067e7cb7510bd67aa67fdbe38fec04e7ec556cb805056d1a01519c",
+      "size_bytes": 89827
     },
     "figures/04_episode_length_distribution.png": {
-      "sha256": "2c171b5007dbbca3c8afcaa8238a49364bd398ffb2904d833bc6b3a4869ab89d",
-      "size_bytes": 66779
+      "sha256": "c81877d971d74dfaf39e62de7191d61fb21c7cc136355d98fd71dd076907e9f5",
+      "size_bytes": 60300
     },
     "figures/05_stages_per_episode.png": {
-      "sha256": "28c4fd3104e43e3aff99c7d2d83d1c8295a511913c7f15788d4859b758dea1c3",
-      "size_bytes": 51544
+      "sha256": "8be11e41aa8498eb6197982dd50c575c43759c74474d6becdb19d4bcc0bcb15c",
+      "size_bytes": 44724
     },
     "figures/06_stage_duration_by_task.png": {
-      "sha256": "eae17ba57b47f750923d900186e6fba116fc8b21b258d87c33ce015451ba6f66",
-      "size_bytes": 75633
+      "sha256": "2af07b4c69c1bf62c0ebab5d09b415a9a28f0f328286a8a56bfaeb9fadcca5a0",
+      "size_bytes": 68952
     },
     "figures/07_annotation_provenance.png": {
-      "sha256": "ffda3ef65e6d023891e183ca26c6d9e8cdc47cc495a36b7be88e7cf3d8523156",
-      "size_bytes": 70010
+      "sha256": "9f1ddd4841118710e1cfc475bd025bc236b236c2a09661a4da794172210058eb",
+      "size_bytes": 52586
     },
     "figures/08_example_stage_timeline.png": {
-      "sha256": "ad08f7e608d7c38ce7fa794fae9b6232994193f175059a1f32a39dee771f137e",
-      "size_bytes": 84187
+      "sha256": "2fb5c42cadfa5e615511c30179b0da200c92a3c74bee1198d80cfb90ea8fc9e8",
+      "size_bytes": 77453
     },
     "summary.json": {
-      "sha256": "8b1a662e57d228bd39dccca2528538f0535502a5ce2e20ddc8c504646207428d",
+      "sha256": "590b46b3699f326631177f32b20010bff6895ec10c18055e5726f93875c09760",
       "size_bytes": 8426
     },
     "tables/dataset_overview.csv": {

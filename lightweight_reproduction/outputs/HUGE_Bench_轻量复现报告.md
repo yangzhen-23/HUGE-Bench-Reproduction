@@ -72,7 +72,7 @@ Synthetic metric implementation smoke test — not a paper result.
 
 ## 7. 本地资源使用
 
-峰值 Python 内存：99,371,512 bytes；elapsed：6.936 秒。
+峰值 Python 内存：99,372,783 bytes；elapsed：7.629 秒。
 
 以上为调用方提供的实测资源值。
 

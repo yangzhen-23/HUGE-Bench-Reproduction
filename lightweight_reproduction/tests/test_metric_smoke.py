@@ -9,7 +9,17 @@ import pytest
 from huge_lightweight.metric_smoke import MetricSmokeResult, run_metric_smoke
 
 
-OFFICIAL_METRIC = Path(__file__).resolve().parents[2] / "HUGE-Bench" / "metric.py"
+def _locate_official_metric() -> Path:
+    test_path = Path(__file__).resolve()
+    fallback = test_path.parents[2].parent / "HUGE-Bench" / "metric.py"
+    for parent in test_path.parents:
+        candidate = parent / "HUGE-Bench" / "metric.py"
+        if candidate.is_file():
+            return candidate
+    return fallback
+
+
+OFFICIAL_METRIC = _locate_official_metric()
 EXPECTED_LABEL = "Synthetic metric implementation smoke test \u2014 not a paper result."
 NUMERIC_FIELDS = ("avg_tcr", "ndtw", "nsp", "success", "path_length")
 

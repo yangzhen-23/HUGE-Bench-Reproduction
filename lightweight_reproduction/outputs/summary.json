@@ -297,8 +297,8 @@
     "limitations": "synthetic identical trajectories only; no predicted model trajectory, collision mesh, 3DGS simulator, or closed-loop evaluation; the result cannot reproduce or support the paper's model-performance table; softdtw_gamma=0.1 is used because the current official implementation with gamma 0 exhibits division-by-zero / non-finite behavior in the local probe."
   },
   "resources": {
-    "peak_python_memory_bytes": 99371512,
-    "elapsed_seconds": 6.936030999997456,
+    "peak_python_memory_bytes": 99372783,
+    "elapsed_seconds": 7.629299500000343,
     "measured": true
   }
 }
